@@ -1,0 +1,21 @@
+$desktop: 1200px;
+$tablet: 768px;
+$mobile: 320px;
+
+
+.container {
+padding: 0px 10px;
+
+@media (max-width: $desktop) and (min-width: $tablet+1) {
+    box-sizing: border-box;
+    max-width: initial;
+  }
+
+  @media (max-width: $tablet) and (min-width: $mobile+1) {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $mobile) {
+    box-sizing: border-box;
+  }
+}

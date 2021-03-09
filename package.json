@@ -1,0 +1,31 @@
+{
+  "name": "step-project-forkio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larysakutyrkina/step-project-forkio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larysakutyrkina/step-project-forkio/issues"
+  },
+  "homepage": "https://github.com/larysakutyrkina/step-project-forkio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "concat": "^1.0.3",
+    "imagemin": "^7.0.1",
+    "watcher": "^1.1.1"
+  }
+}
