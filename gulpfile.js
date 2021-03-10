@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
-const cleanBuild = require('gulp-clean-css');
+const clean = require('gulp-clean-css');
 const sass = require("gulp-sass");
 const concat = require('concat');
 const imagemin = require('imagemin');
@@ -33,6 +33,9 @@ const cleanBuild = () => {
   gulp.src(paths.dist.self, { allowEmpty: true }).pipe(clean());
 }
 
+
+
+
 const buildJS = () => {
     gulp
     .src(paths.src.js)
@@ -50,7 +53,7 @@ const buildCSS = () => {
     .pipe(browserSync.stream());
 };
 
- const autoprefixer = () => {
+ const autoprefixerBuild = () => {
     gulp
     .src(paths.src.scss)
     .pipe(autoprefixer({
@@ -59,7 +62,7 @@ const buildCSS = () => {
     .pipe(gulp.dest('dist'))
  }
 
-const imagemin = () => {
+const imageminBuild = () => {
     gulp
     .src(paths.src.img)
     .pipe(imagemin())
@@ -67,11 +70,24 @@ const imagemin = () => {
 };
 
 
+const buildIMG=()=>(
+    gulp.src(paths.src.img)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.dist.img))
+        .pipe(browserSync.stream())
+)
+
+const uglifyBuild=()=>{
+    gulp.src('js/*.js','scss/*.css')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js','dist/css'))
+}
+
 ///dev tasks
 
 ///Запуск сервера и последующее отслеживание изменений *.js и *.scss файлов в папке src;
 
-    const watcher = () => {
+    const watcherBuild = () => {
         browserSync.init({
         server: {
             baseDir: "./",
@@ -89,21 +105,22 @@ const imagemin = () => {
 //tasks here: (задания для dev и build): (ШАБЛОН)
 
 gulp.task("cleanBuild", cleanBuild);
+gulp.task("buildIMG", buildIMG);
 gulp.task("buildCSS", buildCSS);
-gulp.task("buildJS", buildJs);
-gulp.task("imagemin", imagemin);
+gulp.task("buildJS", buildJS);
+gulp.task("imageminBuild", imageminBuild);
 gulp.task("browser-sync", browserSync);
-gulp.task("autoprefixer", autoprefixer);
-gulp.task("concat", concat);
-gulp.task("watcher", watcher);
+gulp.task("autoprefixerBuild", autoprefixerBuild);
+gulp.task("watcherBuild", watcherBuild);
+gulp.task("uglifyBuild", uglifyBuild);
 
 gulp.task("default", gulp.series(
-    cleanBuild, 
+    cleanBuild,
     buildCSS, 
-    buildJs,
-    imagemin,
+    buildJS,
+    imageminBuild,
     browserSync,
-    watcher,
-    autoprefixer,
-    concat
+    watcherBuild,
+    autoprefixerBuild,
+    uglifyBuild
 ));
