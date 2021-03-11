@@ -8,6 +8,7 @@ const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 
+
 const { src, dest, watch, parallel, series } = require("gulp");
 
 
@@ -45,8 +46,30 @@ clean: sourceFolder,
 
 
 
+
 ///functions
 
+///все задачи связанные с скриптом
+const scripts = () =>
+    src(["src/js/main.js"])
+    .pipe(concat("scripts.min.js"))
+    .pipe(uglify())
+    .pipe(dest(path.dist.js))
+    .pipe(browserSync.stream());
+
+///все задачи связанные с картинками
+const img = () =>
+    src(path.src.img)
+        .pipe(
+            imagemin({
+                progressive: true,
+                svgoPlugins: [{ removeViewBox: false }],
+                interlaced: true,
+                optimizationLevel: 3,
+            })
+        )
+        .pipe(dest(path.dist.img))
+        .pipe(browserSync.stream());
 //watcher (обе dev задачи из тз)
 const watcher = () => {
     browserSync.init({
@@ -69,7 +92,9 @@ const cleanDist = () =>
 
 ///все задачи связанные с стилями
 const style = () =>
-    src(path.src.scss)
+    // src(path.src.scss)
+src("src/scss/**")
+        .pipe(concat("styles.min.css"))
         .pipe(sass().on("error", sass.logError))
         .pipe(
             autoprefixer({
@@ -80,40 +105,28 @@ const style = () =>
         .pipe(dest(path.dist.css))
         .pipe(browserSync.stream());
 
-///все задачи связанные с скриптом
-const scripts = () =>
-    //src(["src/js/script.js"])
-    src([path.src.js])
-        .pipe(concat("scripts.min.js"))
-        .pipe(uglify())
-        .pipe(dest(path.dist.js))
-        .pipe(browserSync.stream());
 
-///все задачи связанные с картинками
-const img = () =>
-    src(path.src.img)
-        .pipe(
-            imagemin({
-                progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],
-                interlaced: true,
-                optimizationLevel: 3,
-            })
-        )
-        .pipe(dest(path.dist.img))
-        .pipe(browserSync.stream());
 
+
+// const build = () => {
+//     series(
+//         cleanDist,
+//         parallel(style, scripts, img));
+// }
 
 
 /// tasks
 
+/// tasks
 exports.cleanDist = cleanDist;
 exports.style = style;
 exports.scripts = scripts;
 exports.img = img;
 exports.watcher = watcher;
-exports.build = series(
-    cleanDist,
-    parallel(style, scripts, img));
-exports.dev = watcher;
-exports.clean = cleanDist;
+// exports.build = series(
+//     cleanDist,
+//     parallel(style, scripts, img));
+// exports.dev = watcher;
+// exports.build = build;
+exports.default = series(series(cleanDist, parallel(style, scripts, img)),watcher  )
+
