@@ -58,18 +58,28 @@ const scripts = () =>
     .pipe(browserSync.stream());
 
 ///все задачи связанные с картинками
-const img = () =>
-    src(path.src.img)
-        .pipe(
+
+// gulp.task('styles', function() {
+//     return gulp.src('src/img/*')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('dist/img'))
+// });
+
+ const img = () =>
+   src("src/img/*")
+       .pipe(
             imagemin({
                 progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],
-                interlaced: true,
-                optimizationLevel: 3,
+              svgoPlugins: [{ removeViewBox: false }],
+              interlaced: true,
+              optimizationLevel: 3,
             })
-        )
-        .pipe(dest(path.dist.img))
-        .pipe(browserSync.stream());
+      )
+      .pipe(dest("dist/img"))
+       .pipe(browserSync.stream());
+
+
+
 //watcher (обе dev задачи из тз)
 const watcher = () => {
     browserSync.init({

@@ -1,9 +1,17 @@
+@import "reset";
+@import "common";
+@import "mixins";
 
-@import "./src/scss/common";
 
-@import "./src/scss/_header.scss";
+@import "header";
+@import "forkApp";
+@import "peopleTalking";
 
-@import "./_reset.scss";
+
+
+.body {
+  font-family: "Montserrat", sans-serif;
+}
 
 
 
