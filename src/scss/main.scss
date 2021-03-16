@@ -1,9 +1,12 @@
+@import "reset";
 
-@import "./src/scss/common";
+@import "common";
 
-@import "./src/scss/_header.scss";
+@import "mixins";
 
-@import "./_reset.scss";
+@import "editor";
+
+@import "services";
 
 
 

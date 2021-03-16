@@ -1,0 +1,25 @@
+
+@mixin Montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+@mixin Lato {
+    font-family: "Lato", sans-serif;
+}
+
+@mixin hoverButton {
+    color: $main_purple;
+    background: #ffffff;
+  }
+  @mixin container ($max, $min){
+    max-width: $max ;
+    min-width: $min;
+    margin: 0 auto;
+   }
+
+  @mixin flex($wrap, $justify, $align) {
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+  }
