@@ -59,11 +59,6 @@ const scripts = () =>
 
 ///все задачи связанные с картинками
 
-// gulp.task('styles', function() {
-//     return gulp.src('src/img/*')
-//         .pipe(imagemin())
-//         .pipe(gulp.dest('dist/img'))
-// });
 
  const img = () =>
    src("src/img/*")
@@ -77,7 +72,6 @@ const scripts = () =>
       )
       .pipe(dest("dist/img"))
        .pipe(browserSync.stream());
-
 
 
 //watcher (обе dev задачи из тз)
