@@ -2,7 +2,7 @@
     padding: 100px 0 70px 0;
     background-color: $white;
     font-family: "Montserrat", sans-serif;
-&__container {
+&__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -91,7 +91,9 @@
 
   @media  (min-width: 993px) {
     .container {
-      @include container(1200px, 993px)
+      max-width: 1200px;
+      min-width: 993px;
+      margin: 0 auto;
     }
     .editor{
       padding: 120px 0 98px 0;
@@ -108,7 +110,9 @@
   }
   @media (min-width: 481px) {
     .container{
-      @include container(992px, 481px)
+      max-width: 992px;
+      min-width: 481px;
+      margin: 0 auto;
     }
     .editor{
       padding: 120px 0 98px 0;
@@ -129,7 +133,9 @@
 
 @media (min-width: 320px) {
   .container{
-    @include container(480px, 320px)
+      max-width: 480px;
+      min-width: 320px;
+      margin: 0 auto;
   }
 
     .editor {
