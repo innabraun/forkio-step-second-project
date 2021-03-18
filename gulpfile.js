@@ -60,6 +60,8 @@ const scripts = () =>
 ///все задачи связанные с картинками
 
 
+
+
  const img = () =>
    src("src/img/*")
        .pipe(
@@ -72,6 +74,7 @@ const scripts = () =>
       )
       .pipe(dest("dist/img"))
        .pipe(browserSync.stream());
+
 
 
 //watcher (обе dev задачи из тз)

@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/larysakutyrkina/step-project-forkio.git"
+    "url": "git+https://github.com/innabraun/forkio-step-second-project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/larysakutyrkina/step-project-forkio/issues"
+    "url": "https://github.com/innabraun/forkio-step-second-project/issues"
   },
-  "homepage": "https://github.com/larysakutyrkina/step-project-forkio#readme",
+  "homepage": "https://github.com/innabraun/forkio-step-second-project/blob/main/README.md",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
@@ -26,8 +26,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-watcher": "^1.0.1",
+    "gulp-watcher": "^0.0.1",
     "node-sass": "^5.0.0"
-  },
-  "dependencies": {}
+  }
 }
