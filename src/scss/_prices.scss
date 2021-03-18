@@ -87,6 +87,7 @@
     text-decoration: none;
     background-color: $prices_btn;
     margin-bottom: 37px;
+    color: white;
 
     &:hover {
       color: inherit;
@@ -127,7 +128,8 @@
   .prices {
     padding-top: 90px;
     padding-bottom: 90px;
-  &__wrapper {
+
+    &__wrapper {
       max-width: 992px;
       min-width: 481px;
       margin: 0 auto;
@@ -152,13 +154,15 @@
     margin-left: 12px;
   }
 }
+
 @media (min-width: 993px) {
   .prices {
-      &__wrapper {
-          max-width: 1200px;
-          min-width: 993px;
-          margin: 0 auto;
-        }
+    &__wrapper {
+      max-width: 1200px;
+      min-width: 993px;
+      margin: 0 auto;
+    }
+
     &__cards {
       padding-top: 60px;
     }

@@ -4,7 +4,7 @@
   background-color: $bggray;
 }
 .services__img {
-margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 .wrapper {
   max-width: 480px;
@@ -12,21 +12,21 @@ margin-bottom: 25px;
 }
 
 @media (min-width: 320px) {
-.services {
-&__title {
-@include Montserrat;
-color: $violet;
-font-size: 28px;
-font-weight: 700;
-line-height: 38px;
-padding: 34px 35px 15px 35px;
-text-align: center;
+  .services {
+  &__title {
+  @include Montserrat;
+  color: $violet;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  padding: 34px 35px 15px 35px;
+  text-align: center;
 }
 
 &__item {
-padding: 19px 15px;
-display: grid;
-justify-items: center;
+  padding: 19px 15px;
+  display: grid;
+  justify-items: center;
 
 
 &-title {
@@ -38,10 +38,10 @@ justify-items: center;
 }
 
 &-text {
-text-align: center;
-font-size: 12px;
-line-height: 21px;
-color: $services_text;
+  text-align: center;
+  font-size: 12px;
+  line-height: 21px;
+  color: $services_text;
 }
 &__img {
 margin-bottom: 25px;
