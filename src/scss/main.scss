@@ -1,9 +1,9 @@
-
 @import "reset";
 @import "common";
 @import "mixins";
-
-
+@import "prices";
+@import "editor";
+@import "services";
 @import "header";
 @import "forkApp";
 @import "peopleTalking";
@@ -13,6 +13,7 @@
 .body {
   font-family: "Montserrat", sans-serif;
 }
+
 
 
 
