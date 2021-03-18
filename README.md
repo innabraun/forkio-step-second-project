@@ -1,7 +1,7 @@
 # forkio-step-second-project
 Members:
 
-Larysa Kutyrkina | Slack: larysa
+Larysa Kutyrkina | Slack: larseeya
 
 Inna Ihnatova | Slack: Inna
 
