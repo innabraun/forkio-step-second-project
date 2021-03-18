@@ -1,4 +1,4 @@
-# forkio-step-second-project
+# forkio-step-second-project https://innabraun.github.io/forkio-step-second-project/
 Members:
 
 Larysa Kutyrkina | Slack: larseeya
@@ -18,7 +18,7 @@ Team work: setting up gulpfile.js file, work with git commits, code review.
 
 Larysa Kutyrkina 
 
-Sections: Editor, Services, Prices.
+Sections: Editor, Services, Prices, GitHub pages.
 
 Inna Ihnatova
 
