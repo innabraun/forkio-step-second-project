@@ -128,6 +128,7 @@
   .prices {
     padding-top: 90px;
     padding-bottom: 90px;
+
     &__wrapper {
       max-width: 992px;
       min-width: 481px;
@@ -153,6 +154,7 @@
     margin-left: 12px;
   }
 }
+
 @media (min-width: 993px) {
   .prices {
     &__wrapper {
@@ -160,6 +162,7 @@
       min-width: 993px;
       margin: 0 auto;
     }
+
     &__cards {
       padding-top: 60px;
     }

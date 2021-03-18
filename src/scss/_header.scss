@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
   &__text{
     display: none;
@@ -82,9 +81,7 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  &__items{
-
-  }
+  
   &__item{
 
     padding: 29px 20px;
