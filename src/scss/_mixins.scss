@@ -14,31 +14,17 @@
 }
 
 @mixin container{
-  padding: 0 10px;
+ padding: 0 10px;
 }
 
 @mixin hoverButton {
   color: $violet;
-  background: #FFFFFF;
+  background: $white;
 }
-@mixin container_1200 {
-  max-width: 1200px;
-  min-width: 993px;
-  margin: 0 auto;
-}
-@mixin container_992 {
-  max-width: 992px;
-  min-width: 481px;
-  margin: 0 auto;
-}
-@mixin container_480 {
-  max-width: 480px;
-  min-width: 320px;
-  margin: 0 auto;
-}
-@mixin flex($display, $wrap, $justify, $align) {
-  display: $display;
-  flex-wrap: $wrap;
-  justify-content: $justify;
-  align-items: $align;
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

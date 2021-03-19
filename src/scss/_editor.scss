@@ -3,12 +3,7 @@
   background-color: $white;
   font-family: "Montserrat", sans-serif;
 
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+
   &__title {
     font-family: "Montserrat";
     letter-spacing: 0;
@@ -18,17 +13,14 @@
     text-transform: uppercase;
   }
   &__subtitle {
-    font-family: 'Lato', sans-serif;
+    @include Lato;
     letter-spacing: 0;
     text-align: center;
     color: $dark;
     margin: 0 0 13px 0;
   }
   &__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+   @include flex;
   }
 }
 
@@ -44,6 +36,7 @@
     margin-right: 10px;
     margin-bottom: 20px;
   }
+  
   &__icon {
     display: flex;
     flex-wrap: nowrap;
@@ -90,6 +83,9 @@
   }
 }
 
+.container{
+  @include container;
+}
 
   @media (min-width: 993px) {
     .container {
@@ -97,6 +93,7 @@
       min-width: 993px;
       margin: 0 auto;
     }
+
     .editor {
       padding: 120px 0 98px 0;
       background-color: $white;
@@ -113,11 +110,13 @@
     }
   }
   @media (min-width: 481px) {
+
     .container {
       max-width: 992px;
       min-width: 481px;
       margin: 0 auto;
     }
+
     .editor {
       padding: 120px 0 98px 0;
       background-color: $white;
@@ -141,6 +140,7 @@
       min-width: 320px;
       margin: 0 auto;
     }
+
 
     .editor {
       padding: 70px 0 88px 0;
