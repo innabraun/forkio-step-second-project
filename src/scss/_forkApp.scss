@@ -11,46 +11,45 @@
     background-repeat: no-repeat;
     background-position: center;
 
-
-
   }
-
   &__title{
-padding-top: 30px;
-    font-weight: 700;
-    color: white;
+    padding-top: 40px;
+    font-weight: $fw-bold;
+    color: $white;
     font-size: 48px;
-
   }
 
   &__middle{
-    padding-top: 30px;
+    padding-top: 40px;
     font-size: 18px;
     color: $violet;
 
   }
 
   &__text{
-    padding-top: 30px;
+    padding-top: 40px;
     font-size: 14px;
-    color: #848E97;
+    color:$services_text;
+  }
+
+  &__btn{
+   padding-top: 200px;
+    bottom: 10px;
   }
 
   &__button{
-      background-color: #8d81ac;
-      color: #ffffff;
+      background-color: $violet;
+      color: $white;
       padding: 11px 40px;
       border-radius: 50px;
       border:none;
-    font-size: 18px;
-    margin-top: 350px;
-    cursor: $cursor;
+      font-size: 18px;
+      cursor: $cursor;
 
   }
 
   &__text-gray{
-    color: #848E97;
-    font-weight: 400;
+    color:$services_text;
     font-size: 14px;
     text-align: center;
     margin-top: 20px;
@@ -59,7 +58,7 @@ padding-top: 30px;
 
 
 .container{
-  @include container;
+ @include container;
 }
 
 @media (min-width:481px ){
@@ -67,16 +66,35 @@ padding-top: 30px;
     padding: 11px 60px;
 
   }
+
+
 }
 
 
 
 @media (min-width:993px ){
-  .forkApp__bg{
+  .forkApp{
+
+  &__bg {
     background-image: url("../img/img3.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
+    &__button{
+      background-color: $violet;
+      color: $white;
+      padding: 11px 40px;
+      border-radius: 50px;
+      border:none;
+      font-size: 18px;
+      cursor: $cursor;
+
+    }
+    &__button:hover{
+      @include hoverButton;
+    }
+
+}
 }
 

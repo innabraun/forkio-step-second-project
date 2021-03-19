@@ -9,7 +9,7 @@
 
   &__title {
     color: $white;
-    font-weight: 700;
+    font-weight: $fw-bold;
     font-size: 28px;
     line-height: 42px;
     text-align: center;
@@ -17,10 +17,7 @@
 
   &__cards {
     padding-top: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  @include flex;
   }
 
   &__wrapper {
@@ -54,7 +51,7 @@
     font-size: 60px;
 
     & span {
-      font-weight: 700;
+      font-weight: $fw-bold;
     }
 
     &:after {
@@ -87,6 +84,7 @@
     text-decoration: none;
     background-color: $prices_btn;
     margin-bottom: 37px;
+    color: white;
 
     &:hover {
       color: inherit;
@@ -94,6 +92,10 @@
     }
   }
 
+}
+
+.container{
+  @include container;
 }
 
 .item-price--active {
@@ -127,11 +129,6 @@
   .prices {
     padding-top: 90px;
     padding-bottom: 90px;
-  &__wrapper {
-      max-width: 992px;
-      min-width: 481px;
-      margin: 0 auto;
-    }
 
     &__title {
       font-size: 42px;
@@ -152,13 +149,10 @@
     margin-left: 12px;
   }
 }
+
 @media (min-width: 993px) {
   .prices {
-      &__wrapper {
-          max-width: 1200px;
-          min-width: 993px;
-          margin: 0 auto;
-        }
+
     &__cards {
       padding-top: 60px;
     }

@@ -7,17 +7,19 @@
 
   &__title{
     font-size: 42px;
-    color: white;
-    font-weight: 700;
+    color: $white;
+    font-weight:$fw-bold;
     text-align: center;
     padding-top:57px;
   }
 
+
 }
 
 
+
 .container{
-  @include container;
+ @include container;
 }
 
 
@@ -32,7 +34,7 @@
 .logo{
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 63px;
   grid-row-gap: 50px;
 
@@ -51,9 +53,9 @@
   }
 
   &__text{
-    color: white;
+    color: $white;
     @include Lato;
-    font-weight: 700;
+    font-weight: $fw-bold;
     font-size: 16px;
     padding-top: 20px;
     font-style: italic;
@@ -65,7 +67,7 @@
 .down__text{
   @include Lato;
   font-style: normal;
-  color: #A291A5;
+  color: $lightV;
   font-size: 14px;
   padding-top: 67px;
   text-align: center;
@@ -73,20 +75,24 @@
 
 .down__line{
   border: none;
-  background-color: #645766;
-  color:#645766 ;
+  background-color: $darkViolet;
+  color:$darkViolet ;
   height: 3px;
   margin-top: 37px;
+  position: relative;
 }
 
 
 @media (min-width:481px) {
+
   .logo{
     display: grid;
     grid-template-columns: repeat(2,3fr);
     grid-column-gap: 63px;
     grid-row-gap: 50px;
   }
+
+
 
 }
 
