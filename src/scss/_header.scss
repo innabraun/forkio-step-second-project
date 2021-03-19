@@ -2,7 +2,6 @@
 .body {
   @include Montserrat;
   min-width: 320px;
-  width: 100%;
 
 }
 
@@ -21,8 +20,8 @@
   }
 
   &__button{
-    background-color: #8d81ac;
-    color: #ffffff;
+    background-color:$violet;
+    color: $white;
     padding: 11px 35px;
     border-radius: 50px;
     border:none;
@@ -34,155 +33,245 @@
 
 .container{
   @include container;
-}
-
-
-.menu {
-  width: 40px;
-
-  &__burgerLine{
-    height: 3px;
-    background-color:#ffffff;
-    margin-bottom: 6px;
-    transition: all .5s;
-  }
-  .line1 {
-    width: 20px;
-    margin-left: auto;
   }
 
-  .line3{
-    margin-bottom: 0;
-  }
 
-}
+  .menu {
+    width: 40px;
 
-.active div:nth-of-type(1) {
-  width: 40px;
-  transform: rotate(-220deg) translateX(7px);
-}
-
-.active div:nth-of-type(2) {
-  display: none;
-}
-
-.active  div:nth-of-type(3) {
-  transform: rotate(220deg) translateX(7px);
-
-}
-
-
-.right{
-  position: absolute;
-  background-color: #333333;
-  margin-top: 35px;
-  transition: all .5s;
-  transform: translateX(100%);
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  
-  &__item{
-
-    padding: 29px 20px;
-    font-size: 26px;
-    border-bottom: 2px solid grey;
-
-
-
-    & a{
-      @include link;
-      color: #ffffff;
-
+    &__burgerLine{
+      height: 3px;
+      background-color:$white;
+      margin-bottom: 6px;
+      transition: all .5s;
     }
-  & a:focus{
-    color: $violet;
+    .line1 {
+      width: 20px;
+      margin-left: auto;
+    }
+
+    .line3{
+      margin-bottom: 0;
+    }
 
   }
-    & a:focus:before{
-      content: "";
-      justify-content: space-between;
-      border-left: 5px solid $violet;
 
-  }
-}
-
-}
-.activeRight{
-  transform: translateX(0);
-  display: block;
-  width: 90%;
-  margin-top: 30px;
-}
-
-
-
-@media (min-width:481px ) {
-  .header{
-    padding-bottom: 0px;
+  .active div:nth-of-type(1) {
+    width: 40px;
+    transform: rotate(-220deg) translateX(7px);
   }
 
-
-
-  .header__text{
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
-    padding-left: 17px;
-    font-weight: $fw-bold;
-    color: $violet;
-    font-size: 24px;
-    @include Lato;
-  }
-
-  .header__button{
-    padding: 13px 50px;
-    border-radius: 50px;
-    border:none;
-    font-size: 17px;
-    cursor: $cursor;
-  }
-
-  .menu{
+  .active div:nth-of-type(2) {
     display: none;
   }
 
-  .right{
-    background: none;
-    position: static;
-    transform: translateX(0%);
-    display: flex;
-
-    &__items{
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-    }
-    &__item{
-      border: none;
-      font-size: 16px;
-      color:$violet;
-      font-weight: 700;
-    }
-  }
-}
-
-@media (min-width:993px ){
-  .header {
-    background-color: black;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  .active  div:nth-of-type(3) {
+    transform: rotate(220deg) translateX(7px);
 
   }
+
+
   .right{
-    display: flex;
+    position: absolute;
+    background-color: $dark;
+    margin-top: 35px;
+    transition: all .5s;
+    transform: translateX(100%);
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
-    flex-direction: row;
-    width: auto;
+
+    &__item{
+
+      padding: 29px 20px;
+      font-size: 26px;
+      border-bottom: 2px solid $icon_bg;
+
+
+
+      & a{
+        @include link;
+        color: $white;
+
+      }
+      & a:focus{
+        color: $violet;
+
+      }
+      & a:focus:before{
+        content: "";
+        justify-content: space-between;
+        border-left: 5px solid $violet;
+
+      }
+    }
+
+  }
+  .activeRight{
+    transform: translateX(0);
+    display: block;
+    width: 90%;
+    margin-top: 30px;
   }
 
-}
 
 
+  @media (min-width:481px ) {
+    .header {
+      padding-bottom: 0px;
+     @include flex;
+
+
+      &__logo{
+       @include flex;
+        justify-content: flex-start;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        padding-left: 17px;
+        font-weight: $fw-bold;
+        color: $violet;
+        font-size: 24px;
+        @include Lato;
+        justify-content: flex-start;
+      }
+      &__button {
+        padding: 13px 50px;
+        border-radius: 50px;
+        border: none;
+        font-size: 17px;
+        cursor: $cursor;
+        justify-content: flex-end;
+
+      }
+    }
+
+    .menu{
+      display: none;
+    }
+
+    .right{
+      background: none;
+      position: static;
+      transform: translateX(0%);
+      display: flex;
+
+      &__items{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+      &__item{
+        border: none;
+        font-size: 16px;
+        font-weight:$fw-bold;
+        padding: 12px ;
+      }
+
+      & a{
+        color: $violet;
+
+      }
+      & a:focus:before{
+        content: "";
+        border-left: none;
+
+      }
+
+    }
+    .container{
+      padding: 0;
+    }
+
+  }
+
+  @media (min-width:993px ){
+    .header{
+     @include flex;
+    &__logo{
+        @include flex;
+        justify-content: flex-start;
+      }
+
+      svg:hover{
+        fill:$white;
+
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        padding-left: 17px;
+        font-weight: $fw-bold;
+        color: $violet;
+        font-size: 24px;
+        @include Lato;
+        justify-content: flex-start;
+      }
+      &__text:hover{
+        color: $white;
+      }
+
+      &__button {
+        padding: 13px 50px;
+        border-radius: 50px;
+        border: none;
+        font-size: 17px;
+        cursor: $cursor;
+        justify-content: flex-end;
+
+      }
+
+      &__button:hover {
+        @include hoverButton;
+        border: none;
+      }
+    }
+
+    .menu{
+      display: none;
+    }
+
+    .right{
+      background: none;
+      position: static;
+      transform: translateX(0%);
+      display: flex;
+
+      &__items{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+      &__item{
+        border: none;
+        font-size: 16px;
+        font-weight: $fw-bold;
+        padding: 12px ;
+      }
+
+      & a{
+        color: $violet;
+
+      }
+
+      & a:hover {
+        color:$white;
+      }
+    }
+
+    & a:focus:before{
+      content: "";
+      border-left: none;
+    }
+
+    .container{
+      padding: 0;
+    }
+  }
 
 

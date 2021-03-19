@@ -2,17 +2,20 @@
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
   background-color: $bggray;
-}
-.services__img {
+
+&__img {
   margin-bottom: 25px;
 }
-.wrapper {
-  max-width: 480px;
-  min-width: 320px;
+
+}
+
+.container{
+  @include container;
 }
 
 @media (min-width: 320px) {
   .services {
+
   &__title {
   @include Montserrat;
   color: $violet;
@@ -43,23 +46,20 @@
   line-height: 21px;
   color: $services_text;
 }
-&__img {
-margin-bottom: 25px;
+   &__img {
+   margin-bottom: 25px;
 }
 
-&__main-picture {
-margin-top: 38px;
+  &__main-picture {
+  margin-top: 38px;
  }
+
 }
 }
 }
 @media (min-width: 481px) {
   .services {
-    .container {
-      max-width: 992px;
-      min-width: 481px;
-      margin: 0 auto;
-    }
+
 
     &__title {
       font-size: 42px;
@@ -114,19 +114,15 @@ margin-top: 38px;
   .services {
     background-color: $bggray;
     overflow: hidden;
-
-      .container{
-        max-width: 1200px;
-        min-width: 993px;
-        margin: 0 auto;
-      }
   }
 
   .services {
-    &__container {
+
+    &__wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
     }
+
     &__cards {
       grid-column-start: 1;
       grid-row: 1/3;
