@@ -33,18 +33,19 @@
   }
 
   &__btn{
-   padding-top: 200px;
+    padding-top: 200px;
     bottom: 10px;
   }
 
   &__button{
-      background-color: $violet;
-      color: $white;
-      padding: 11px 40px;
-      border-radius: 50px;
-      border:none;
-      font-size: 18px;
-      cursor: $cursor;
+    background-color: $violet;
+    color: $white;
+    padding: 11px 40px;
+    border-radius: 50px;
+    border:none;
+    font-size: 18px;
+    cursor: $cursor;
+    outline: none;
 
   }
 
