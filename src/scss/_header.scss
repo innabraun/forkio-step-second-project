@@ -26,12 +26,18 @@
     border:none;
     font-size: 17px;
     cursor: $cursor;
+    outline: none;
   }
 
 }
 
 .container{
   @include container;
+}
+
+
+.flexColumn{
+  flex-direction: column;
 }
 
 
@@ -80,6 +86,13 @@
   flex-direction: column;
   justify-content: space-between;
 
+
+
+  .mobile{
+    display: flex;
+
+  }
+
   &__item{
 
     padding: 29px 20px;
@@ -118,9 +131,7 @@
 
 @media (min-width:481px ) {
   .header {
-    padding-bottom: 0px;
-    @include flex;
-
+    padding-bottom: 0;
 
     &__logo{
       @include flex;
@@ -154,14 +165,19 @@
     transform: translateX(0%);
     display: flex;
 
+    .desktop{
+      display: none;
+    }
+
     &__items{
       display: flex;
-      justify-content: space-around;
-      flex-direction: row;
+      justify-content: space-between;
+
+
     }
     &__item{
       border: none;
-      font-size: 16px;
+      font-size: 15px;
       font-weight:$fw-bold;
       padding: 12px ;
     }
@@ -243,6 +259,7 @@
     position: static;
     transform: translateX(0%);
     display: flex;
+    margin: 0;
 
     &__items {
       display: flex;
@@ -250,11 +267,20 @@
       flex-direction: row;
     }
 
+    .desktop{
+      display: flex;
+      align-items: center;
+    }
+
+    .mobile{
+      display: none;
+    }
+
+
     &__item {
       border: none;
       font-size: 16px;
       font-weight: $fw-bold;
-      padding: 12px;
     }
 
     & a {
