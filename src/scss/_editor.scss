@@ -2,12 +2,10 @@
   padding: 100px 0 70px 0;
   background-color: $white;
   font-family: "Montserrat", sans-serif;
-
-
   &__title {
-    font-family: "Montserrat";
+    @include Montserrat;
     letter-spacing: 0;
-    font-weight: 700;
+    font-weight: $fw-bold;
     color: $editor_title_color;
     text-align: center;
     text-transform: uppercase;
@@ -20,7 +18,7 @@
     margin: 0 0 13px 0;
   }
   &__buttons {
-   @include flex;
+    @include flex;
   }
 }
 
@@ -28,15 +26,11 @@
   &__btn {
     color: $editor_btn;
     font-size: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     line-height: 20px;
     margin-right: 10px;
     margin-bottom: 20px;
   }
-  
   &__icon {
     display: flex;
     flex-wrap: nowrap;
@@ -51,10 +45,10 @@
     text-decoration: none;
     span {
       padding-left: 2px;
-      font-weight: 700;
+      font-weight: $fw-bold;
     }
     &:hover {
-      background-color: #f3f4f696;
+      background-color: $greybg;
     }
   }
   &__number {
@@ -87,75 +81,56 @@
   @include container;
 }
 
-  @media (min-width: 993px) {
-    .container {
-      max-width: 1200px;
-      min-width: 993px;
-      margin: 0 auto;
+
+
+@media  (min-width: 993px) {
+
+  .editor{
+    padding: 120px 0 98px 0;
+    background-color: $white;
+    &__title {
+      font-size: 54px;
+      line-height: 54px;
+      margin-bottom: 30px;
     }
-
-    .editor {
-      padding: 120px 0 98px 0;
-      background-color: $white;
-
-      &__title {
-        font-size: 54px;
-        line-height: 54px;
-        margin-bottom: 30px;
-      }
-
-      &__subtitle {
-        margin: 0 10px 24px 10px;
-      }
+    &__subtitle {
+      margin: 0 10px 24px 10px;
     }
   }
-  @media (min-width: 481px) {
+}
+@media (min-width: 481px) {
+  .editor{
+    padding: 120px 0 98px 0;
+    background-color: $white;
 
-    .container {
-      max-width: 992px;
-      min-width: 481px;
-      margin: 0 auto;
+    &__title {
+      font-size: 42px;
+      line-height: 42px;
+      margin-bottom: 30px;
     }
 
-    .editor {
-      padding: 120px 0 98px 0;
-      background-color: $white;
-
-      &__title {
-        font-size: 42px;
-        line-height: 42px;
-        margin-bottom: 30px;
-      }
-
-      &__subtitle {
-        margin: 0 10px 24px 10px;
-      }
+    &__subtitle {
+      margin: 0 10px 24px 10px;
     }
   }
+}
 
 
-  @media (min-width: 320px) {
-    .container {
-      max-width: 480px;
-      min-width: 320px;
-      margin: 0 auto;
+@media (min-width: 320px) {
+
+  .editor {
+    padding: 70px 0 88px 0;
+
+    &__title {
+      font-size: 28px;
+      line-height: 28px;
+      margin: 0 0 27px 0;
     }
 
-
-    .editor {
-      padding: 70px 0 88px 0;
-
-      &__title {
-        font-size: 28px;
-        line-height: 28px;
-        margin: 0 0 27px 0;
-      }
-
-      &__subtitle {
-        margin: 0 10px 36px 10px;
-        font-size: 14px;
-        line-height: 20px;
-      }
+    &__subtitle {
+      margin: 0 10px 36px 10px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
-
+}

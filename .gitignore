@@ -5,3 +5,4 @@ package-lock.json/**/*
 *.xml
 .DS_Store
 build/**/*
+dist/*

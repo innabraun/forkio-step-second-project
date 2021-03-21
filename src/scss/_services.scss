@@ -2,63 +2,60 @@
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
   background-color: $bggray;
-
-&__img {
-  margin-bottom: 25px;
 }
-
+.services__img {
+  margin-bottom: 25px;
 }
 
 .container{
   @include container;
 }
 
+
 @media (min-width: 320px) {
   .services {
-  &__title {
-  @include Montserrat;
-  color: $violet;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 38px;
-  padding: 34px 35px 15px 35px;
-  text-align: center;
-}
+    &__title {
+      @include Montserrat;
+      color: $violet;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 38px;
+      padding: 34px 35px 15px 35px;
+      text-align: center;
+    }
 
-&__item {
-  padding: 19px 15px;
-  display: grid;
-  justify-items: center;
+    &__item {
+      padding: 19px 15px;
+      display: grid;
+      justify-items: center;
 
 
-&-title {
-  margin: 0 0 18px 0;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400;
-  color: $dark;
-}
+      &-title {
+        margin: 0 0 18px 0;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: $dark;
+      }
 
-&-text {
-  text-align: center;
-  font-size: 12px;
-  line-height: 21px;
-  color: $services_text;
-}
-   &__img {
-   margin-bottom: 25px;
-}
+      &-text {
+        text-align: center;
+        font-size: 12px;
+        line-height: 21px;
+        color: $services_text;
+      }
+      &__img {
+        margin-bottom: 25px;
+      }
 
-  &__main-picture {
-  margin-top: 38px;
- }
-
-}
-}
+      &__main-picture {
+        margin-top: 38px;
+      }
+    }
+  }
 }
 @media (min-width: 481px) {
   .services {
-
 
     &__title {
       font-size: 42px;
@@ -109,19 +106,15 @@
 }
 
 @media (min-width: 993px) {
-
   .services {
+
     background-color: $bggray;
     overflow: hidden;
-  }
 
-  .services {
-
-    &__wrapper {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    &__container {
+      display: grid;
+      grid-template-columns: 50% 50%;
     }
-
     &__cards {
       grid-column-start: 1;
       grid-row: 1/3;
