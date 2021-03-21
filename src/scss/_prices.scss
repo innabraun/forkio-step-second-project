@@ -1,5 +1,5 @@
 .prices {
-  font-family: "Montserrat", sans-serif;
+  @include Montserrat;
   background-image: url("../img/prices_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 
   &__cards {
     padding-top: 32px;
-  @include flex;
+   @include flex;
   }
 
   &__wrapper {
@@ -84,7 +84,7 @@
     text-decoration: none;
     background-color: $prices_btn;
     margin-bottom: 37px;
-    color: white;
+    color: $white;
 
     &:hover {
       color: inherit;
@@ -92,10 +92,6 @@
     }
   }
 
-}
-
-.container{
-  @include container;
 }
 
 .item-price--active {
@@ -125,6 +121,11 @@
   }
 }
 
+.container{
+  @include container;
+}
+
+
 @media (min-width: 481px) {
   .prices {
     padding-top: 90px;
@@ -149,10 +150,8 @@
     margin-left: 12px;
   }
 }
-
 @media (min-width: 993px) {
   .prices {
-
     &__cards {
       padding-top: 60px;
     }
